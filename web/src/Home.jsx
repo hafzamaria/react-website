@@ -1,7 +1,8 @@
-import React from 'react'
+import React  from 'react'
 import HeroSection from './components/HeroSection'
 
 const Home = () => {
+  
   const data={
     name:'Hafza Maria',
     image:'./image/hero1.jpg'

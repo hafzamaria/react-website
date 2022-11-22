@@ -1,17 +1,24 @@
-import React from 'react'
+// import React ,{useContext}from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from '../Styles/Button';
+// import {AppContext} from '../Context';
+import { useGlobalContext } from '../Context';
+
 const HeroSection = ({name,image}) => {
+
+    // const firstName = useContext(AppContext) instead of this we call useGlobalContext from Context.jsx
+    //  &also dnt need to import AppContext ans useContext
+    const firstName = useGlobalContext();
   return (
-    
     <div>
     <Wrapper>
      <div className='container grid grid-two-coloumn'>
       <div className="section-hero-data">
         <p className='hero-top-data'>THIS IS ME</p>
         <h1 className='hero-heading'>{name}</h1>
-        <p className='hero-para'>I am Hafza Maria.A Full Stack Developer,YouTuber and Freelancer.
+        <p className='hero-para'>I am {firstName}.A Full Stack Developer,YouTuber and Freelancer.
           A Full Stack Developer,YouTuber and Freelancer.</p>
           <Button className='btn hireme-btn'>
             <NavLink to='/Contact'>hire me</NavLink>
