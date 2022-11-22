@@ -1,9 +1,14 @@
 import React from 'react'
+import HeroSection from './components/HeroSection'
 
 const About = () => {
+  const data ={
+    name:"Maria Momina",
+    image:'./image/about1.jpg'
+  }
   return (
     <div>
-      I am About
+      <HeroSection   {...data}/>
     </div>
   )
 }
