@@ -6,11 +6,12 @@ import { Button } from '../Styles/Button';
 // import {AppContext} from '../Context';
 import { useGlobalContext } from '../Context';
 
-const HeroSection = ({name,image}) => {
+const HeroSection = () => {
 
     // const firstName = useContext(AppContext) instead of this we call useGlobalContext from Context.jsx
     //  &also dnt need to import AppContext ans useContext
-    const firstName = useGlobalContext();
+    // const firstName = useGlobalContext();
+    const {name,image} = useGlobalContext();
   return (
     <div>
     <Wrapper>
@@ -18,7 +19,7 @@ const HeroSection = ({name,image}) => {
       <div className="section-hero-data">
         <p className='hero-top-data'>THIS IS ME</p>
         <h1 className='hero-heading'>{name}</h1>
-        <p className='hero-para'>I am {firstName}.A Full Stack Developer,YouTuber and Freelancer.
+        <p className='hero-para'>I am {name}.A Full Stack Developer,YouTuber and Freelancer.
           A Full Stack Developer,YouTuber and Freelancer.</p>
           <Button className='btn hireme-btn'>
             <NavLink to='/Contact'>hire me</NavLink>
