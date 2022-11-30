@@ -8,7 +8,7 @@ import {reducer} from './Reducer';
 // consumer /useContext (hook)
  const AppContext = React.createContext();
 
-// const API ='https://thapareactapi.up.railway.app';
+// const API ='https://';
 
 
 
