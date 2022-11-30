@@ -1,5 +1,5 @@
 // import { createContext, useContext } from "react";
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import {reducer} from './Reducer';
 
 //context to heroSection
@@ -8,9 +8,15 @@ import {reducer} from './Reducer';
 // consumer /useContext (hook)
  const AppContext = React.createContext();
 
+// const API ='https://thapareactapi.up.railway.app';
+
+
+
+
  const initialState ={
     name:'',
     image:'',
+    // services:[],
  };
 
 
@@ -35,15 +41,48 @@ import {reducer} from './Reducer';
                 {
                     type:'ABOUT_UPDATE',
                     payload:{
-                        name:"Maria Momina",
+                        name:"Sumama Imran",
                         image:'./image/about1.jpg'
                     }
                 }
             )
             
             }
+
+            ////////////services
+            const updateServicesPage =() =>{
+                return dispatch(
+                    {
+                        type:'SERVICES_UPDATE',
+                        payload:{
+                            name:"Maria Momina",
+                            image:'',
+                            
+                        }
+                    }
+                )
+                
+                }
+       //////to get the api data
+    //    const getServices = async (url) => {
+    //      try{
+    //         const res =await fetch(url);
+    //         const data =await res.json();
+    //          dispatch({type:'GET_SERVICES' ,payload:data});
+    //      }catch(error){
+    //         console.log(error)}
+    //    }
+       
+
+
+       //////////to call the api
+    //    useEffect(()=>{
+    //     getServices(API);
+    //    },[]);   
+       
+       
     return(
-        <AppContext.Provider value={{...state,updateHomePage,updateAboutPage}}>{children}</AppContext.Provider>///value is firstName
+        <AppContext.Provider value={{...state,updateHomePage,updateAboutPage,updateServicesPage}}>{children}</AppContext.Provider>///value is firstName
     )
 
  };

@@ -15,6 +15,14 @@ export const reducer =(state, action)=>{
             image:action.payload.image
         }
     }
+    if(action.type === "SERVICES_UPDATE"){
+        return{
+        ...state,
+        //  services:action.payload,
+        name:action.payload.name,
+        image:action.payload.image
+        }
+    }
     
     
     return state;
