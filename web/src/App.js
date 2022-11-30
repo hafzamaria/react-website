@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import {BrowserRouter,Routes,Route,} from "react-router-dom";
 import {ThemeProvider} from 'styled-components';/////npm i styled components from npm react-router-dom(search(styled components))
 import { GlobalStyle } from './GlobalStyle';
+import Error from './Error';
 function App() {
 
  const theme={
@@ -42,6 +43,7 @@ function App() {
   <Route path='/About' element={<About/>}/>
   <Route path='/Services' element={<Services/>}/>
   <Route path='/Contact' element={<Contact/>}/>
+  <Route path='*' element={<Error/>}/>
 </Routes>
 <Footer/>
 </BrowserRouter>
