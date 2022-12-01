@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from '../Styles/Button';
-import { FaDiscord,FaInstagram,FaYoutube} from "react-icons/fa";
+import { FaFacebookF,FaInstagram,FaGithub} from "react-icons/fa";
 const Footer = () => {
   return (
     <Wrapper>
@@ -23,10 +23,10 @@ const Footer = () => {
     {/* footer section */}
     <footer>
 
-      <div className='container grid grid-four-column'>
+      <div className='footer-container'>
         <div className='footer-about'>
           <h3>Hafza Maria</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+          <p>I am junior MERN Stack developer. </p>
         </div>
         {/* 2nd column */}
         <div className='footer-subscribe'>
@@ -41,31 +41,73 @@ const Footer = () => {
           <h3>Follow Us</h3>
           <div className="footer-social--icons">
             <div>
-           < FaDiscord className='icons' />
+              <a href='https://www.facebook.com/profile.php?id=100006701534638' target='_blank'>
+           < FaFacebookF className='icons' />
+           </a>
             </div>
             <div>
+              <a href='https://www.instagram.com/mariahussainjamal/' target='_blank'>
            < FaInstagram className='icons' />
+           </a>
             </div>
             <div>
-           < FaYoutube className='icons' />
+              <a href='https://github.com/hafzamaria' target='_blank'>
+           < FaGithub className='icons' />
+           </a>
             </div>
           </div>
         </div>
+        {/* 4th column */}
+        <div className="footer-contact">
+          <h3>Call Us</h3>
+          <h3>+92 3332296495</h3>
         </div>
-      
+        </div>
+
+        {/* bottom section */}
+    <div className="footer-bottom--section">
+      <hr/>
+      <div className="footer-bottom-flex">
+        <p>
+          @{new Date().getFullYear()} HafzaMaria. All Rights Reserved
+        </p>
+        <div className='policy'>
+          <p>PRIVACY POLICY</p>
+          <p>TERMS & CONDITIONS</p>
+        </div>
+        </div>
+      </div>     
     </footer>
     </Wrapper>
   )
 }
 const Wrapper = styled.section`
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: baseline;
+    gap: 7rem;
+}
+.footer-about{
+  width: 16rem;
+}
+.footer-subscribe{
+  width:25rem;
+}
 .contact-short {
   max-width:60vw;
   margin: auto;
-  padding:5rem 10rem;
+  padding:4rem 10rem;
   background-color:${({theme})=> theme.colors.bg};
   border-radius:1rem;
   box-shadow: ${({theme})=> theme.colors.shadowSupport};
   transform:translateY(50%);
+  box-shadow: 1px 0px 3px  lightgray;
+  justify-content:space-between;
+ 
+      
 
 
   .grid{
@@ -82,12 +124,13 @@ const Wrapper = styled.section`
   }
 }
 footer{
-  padding:14rem 0 9rem 0;
+  padding:10rem 0 9rem 0;
   background-color:${({theme})=> theme.colors.footer_bg};
 
   h3{
     color:${({theme})=> theme.colors.hr};
     margin-bottom:2.4rem;
+  
   }
   p{
     color:white;
@@ -108,6 +151,24 @@ footer{
        cursor:pointer;
       }
     }
+  }
+  .footer-bottom--section{
+    padding-top:5rem;
+ 
+
+.footer-bottom-flex{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+   gap:45rem;
+  margin-bottom: -6rem;
+}
+    hr{
+      margin-bottom:2rem;
+      color:${({theme})=> theme.colors.hr};
+      height:0.1px;
+    }
+   
   }
 }
 `;
