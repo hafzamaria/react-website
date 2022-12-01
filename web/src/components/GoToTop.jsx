@@ -32,8 +32,8 @@ if(winScroll > heightToHidden){
 //  step3
 useEffect(()=>{
  window.addEventListener('scroll', listenToScroll);
- 
- ///step9
+
+ ///step9///this line hide the scroll button
  return window.removeEventListener('scroll', listenToScroll);
 },[])
 
