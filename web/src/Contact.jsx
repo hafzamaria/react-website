@@ -61,7 +61,7 @@ allowFullScreen=""
   style={{border:0}}
   allowFullScreen="" 
   loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    {/* ////////form */}
+    {/* ////////form (formspree)go to + sign=>new form=> name the form then creat,tn copy url n paste it into form action */}
     <div className="container">
       <div className="contact-form">
     <form action='https://formspree.io/f/maykglao' method='POST' className='contact-inputs'>
