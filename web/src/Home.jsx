@@ -1,6 +1,9 @@
-import {useEffect} from 'react'
+import {useEffect} from 'react';
 import HeroSection from './components/HeroSection'
+import Contact from './Contact';
 import {useGlobalContext} from './Context';
+import Services from './Services';
+
 const Home = () => {
   
   // const data={
@@ -13,9 +16,11 @@ const Home = () => {
   useEffect(() => updateHomePage(),[]);
 
   return (
-    <div>
+    <>
       <HeroSection/>
-    </div>
+      <Services/>
+      <Contact/>
+    </>
   )
 }
 

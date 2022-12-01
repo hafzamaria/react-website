@@ -15,6 +15,20 @@ html
     font-size: 62.5%;
     overflow-x : hidden;
 }
+::-webkit-scrollbar{
+  width:1.5rem;  
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background:#fff ;
+    border:5px solid transparent;
+    border-radius:9px;
+    background-clip:content-box;
+}
+
+
 h1
 {
     color : ${({theme})=>theme.colors.heading};
