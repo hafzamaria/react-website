@@ -10,6 +10,7 @@ import {BrowserRouter,Routes,Route,} from "react-router-dom";
 import {ThemeProvider} from 'styled-components';/////npm i styled components from npm react-router-dom(search(styled components))
 import { GlobalStyle } from './GlobalStyle';
 import Error from './Error';
+import GoToTop from './components/GoToTop';
 function App() {
 
  const theme={
@@ -35,6 +36,7 @@ function App() {
    <>
    <ThemeProvider theme={theme}>
     <GlobalStyle/>
+    
 <BrowserRouter>
 {/* //////////we need header & footer all pages... */}
 <Header/>
@@ -45,6 +47,7 @@ function App() {
   <Route path='/Contact' element={<Contact/>}/>
   <Route path='*' element={<Error/>}/>
 </Routes>
+<GoToTop/>
 <Footer/>
 </BrowserRouter>
 
