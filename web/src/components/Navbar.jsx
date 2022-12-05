@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { CgMenu, CgClose } from "react-icons/cg"; ////in react-icons go to css.gg last mai hai menu mai
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false); /////for mob menu
-
+  
+        
   const Nav = styled.nav`
     .navbar-list {
       display: flex;
@@ -107,28 +108,40 @@ const Navbar = () => {
     }
   `;
   return (
+    
+      
+           
+          
     <Nav>
       {/* <div className="menuIcon active"> */}
       {/* ////for close &menu btn */}
       <div className={openMenu ? "menuIcon active" : "menuIcon"}>
         <ul className="navbar-list">
-          <li>
-            <NavLink className="navbar-link" to="/">
+          <li >
+            <NavLink className="navbar-link"  to="/"
+            onClick={() => setOpenMenu(!openMenu)}
+            activeClassName="active">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/About">
+            <NavLink className="navbar-link" to="/About"
+              onClick={() => setOpenMenu(!openMenu)}
+              ClassName="active">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/Services">
+            <NavLink className="navbar-link" to="/Services"
+            onClick={() => setOpenMenu(!openMenu)}
+            ClassName="active">
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink className="navbar-link" to="/Contact">
+            <NavLink className="navbar-link" to="/Contact"
+            onClick={() => setOpenMenu(!openMenu)}
+            ClassName="active">
               Contact
             </NavLink>
           </li>
