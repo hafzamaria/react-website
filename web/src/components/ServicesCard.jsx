@@ -26,7 +26,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
@@ -43,7 +43,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
@@ -60,7 +60,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
@@ -77,7 +77,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
@@ -94,7 +94,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
@@ -111,7 +111,7 @@ const ServicesCard = () => {
                 I am {name}.A Full Stack Developer,YouTuber and Freelancer. A
                 Full Stack Developer,YouTuber and Freelancer.
               </p>
-              <NavLink to="/services">
+              <NavLink to="/About">
                 <Button className="btn">Read More</Button>
               </NavLink>
             </div>
