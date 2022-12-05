@@ -1,86 +1,95 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components'
-import { Button } from '../Styles/Button';
-import { FaFacebookF,FaInstagram,FaGithub} from "react-icons/fa";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { Button } from "../Styles/Button";
+import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <Wrapper>
-    <section className="contact-short">
-      <div className='grid grid-two-column'>
-        <div className='heading'>
-          <h3>Ready to get started?</h3>
-          <h3>Talk to us today</h3>
-        </div> 
-        
-        <div>
-          <NavLink to='/'>
-            <Button>Get Started</Button>
-          </NavLink>
-        </div>
-      </div>
-    </section>
-    {/* footer section */}
-    <footer>
+      <section className="contact-short">
+        <div className="grid grid-two-column">
+          <div className="heading">
+            <h3>Ready to get started?</h3>
+            <h3>Talk to us today</h3>
+          </div>
 
-      <div className='footer-container'>
-        <div className='footer-about'>
-          <h3>Hafza Maria</h3>
-          <p>I am junior MERN Stack developer. </p>
-        </div>
-        {/* 2nd column */}
-        <div className='footer-subscribe'>
-          <h3>Subscribe to get important updates</h3>
-         <form action='#'>
-          <input type="email" required autoComplete='off' placeholder='Email'/><br/>
-          <input type='submit' value='Subscribe' />
-         </form>
-        </div>
-        {/* 3rd column */}
-        <div className="footer-social">
-          <h3>Follow Us</h3>
-          <div className="footer-social--icons">
-            <div>
-              <a href='https://www.facebook.com/profile.php?id=100006701534638' target='_blank'>
-           < FaFacebookF className='icons' />
-           </a>
-            </div>
-            <div>
-              <a href='https://www.instagram.com/mariahussainjamal/' target='_blank'>
-           < FaInstagram className='icons' />
-           </a>
-            </div>
-            <div>
-              <a href='https://github.com/hafzamaria' target='_blank'>
-           < FaGithub className='icons' />
-           </a>
-            </div>
+          <div>
+            <NavLink to="/">
+              <Button>Get Started</Button>
+            </NavLink>
           </div>
         </div>
-        {/* 4th column */}
-        <div className="footer-contact">
-          <h3>Call Us</h3>
-          <h3>+92 3332296495</h3>
-        </div>
+      </section>
+      {/* footer section */}
+      <footer>
+        <div className="footer-container">
+          <div className="footer-about">
+            <h3>Hafza Maria</h3>
+            <p>I am junior MERN Stack developer. </p>
+          </div>
+          {/* 2nd column */}
+          <div className="footer-subscribe">
+            <h3>Subscribe to get important updates</h3>
+            <form action="#">
+              <input
+                type="email"
+                required
+                autoComplete="off"
+                placeholder="Email"
+              />
+              <br />
+              <input type="submit" value="Subscribe" />
+            </form>
+          </div>
+          {/* 3rd column */}
+          <div className="footer-social">
+            <h3>Follow Us</h3>
+            <div className="footer-social--icons">
+              <div>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100006701534638"
+                  target="_blank"
+                >
+                  <FaFacebookF className="icons" />
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/mariahussainjamal/"
+                  target="_blank"
+                >
+                  <FaInstagram className="icons" />
+                </a>
+              </div>
+              <div>
+                <a href="https://github.com/hafzamaria" target="_blank">
+                  <FaGithub className="icons" />
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* 4th column */}
+          <div className="footer-contact">
+            <h3>Call Us</h3>
+            <h3>+92 3332296495</h3>
+          </div>
         </div>
 
         {/* bottom section */}
-    <div className="footer-bottom--section">
-      <hr/>
-      <div className="footer-bottom-flex">
-        <p>
-          @{new Date().getFullYear()} HafzaMaria. All Rights Reserved
-        </p>
-        <div className='policy'>
-          <p>PRIVACY POLICY</p>
-          <p>TERMS & CONDITIONS</p>
+        <div className="footer-bottom--section">
+          <hr />
+          <div className="footer-bottom-flex">
+            <p>@{new Date().getFullYear()} HafzaMaria. All Rights Reserved</p>
+            <div className="policy">
+              <p>PRIVACY POLICY</p>
+              <p>TERMS & CONDITIONS</p>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>     
-    </footer>
+      </footer>
     </Wrapper>
-  )
-}
+  );
+};
 const Wrapper = styled.section`
 
 .footer-container{
@@ -101,9 +110,9 @@ const Wrapper = styled.section`
   max-width:60vw;
   margin: auto;
   padding:4rem 10rem;
-  background-color:${({theme})=> theme.colors.bg};
+  background-color:${({ theme }) => theme.colors.bg};
   border-radius:1rem;
-  box-shadow: ${({theme})=> theme.colors.shadowSupport};
+  box-shadow: ${({ theme }) => theme.colors.shadowSupport};
   transform:translateY(50%);
   box-shadow: 1px 0px 3px  lightgray;
   justify-content:space-between;
@@ -126,10 +135,10 @@ const Wrapper = styled.section`
 }
 footer{
   padding:10rem 0 9rem 0;
-  background-color:${({theme})=> theme.colors.footer_bg};
+  background-color:${({ theme }) => theme.colors.footer_bg};
 
   h3{
-    color:${({theme})=> theme.colors.hr};
+    color:${({ theme }) => theme.colors.hr};
     margin-bottom:2.4rem;
   
   }
@@ -161,25 +170,25 @@ footer{
   display:flex;
   flex-direction:row;
   justify-content:center;
-   gap:45rem;
+   gap:3rem;
   margin-bottom: -6rem;
 }
     hr{
       margin-bottom:2rem;
-      color:${({theme})=> theme.colors.hr};
+      color:${({ theme }) => theme.colors.hr};
       height:0.1px;
     }
    
   }
 }
 
-@media (max-width:${({theme})=> theme.media.tab}){
+@media (max-width:${({ theme }) => theme.media.tab}){
  
   .footer-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4rem;
+    gap: ;
     padding: 20px;
     -webkit-flex-direction: row;
   }
@@ -190,14 +199,12 @@ footer{
   .footer-bottom-flex{
     display: flex;
     justify-content: center;
-    gap: 8rem;
+    gap: ;
   }
 }
 }
 
-
-
-@media (max-width:${({theme})=> theme.media.mobile}){
+@media (max-width:${({ theme }) => theme.media.mobile}){
   .footer-container{
     display: flex;
     justify-content: center;
@@ -206,7 +213,6 @@ footer{
     gap: 5rem;
     margin-bottom: -5rem;
     
-
     .footer-subscribe{
       width: 19rem;
     }
@@ -220,7 +226,6 @@ footer{
     flex-direction: column;
     align-items: center;
     padding:2rem 6rem;
-
     .grid{
       display:flex;
       flex-direction:column;
@@ -236,18 +241,10 @@ footer{
       }
     }
     }
+    
   }
 
- 
-  .footer-bottom--section{
 
-.footer-bottom-flex{
- display: flex;
- flex-direction:column;
- align-items: center;
-}
-}
-}
 `;
 
-export default Footer
+export default Footer;
