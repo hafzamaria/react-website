@@ -31,7 +31,7 @@ const GoToTop = () => {
     window.addEventListener("scroll", listenToScroll);
 
     ///step9///this line hide the scroll button
-    return window.removeEventListener("scroll", listenToScroll);
+    // return window.removeEventListener("scroll", listenToScroll);
   }, []);
 
   return (

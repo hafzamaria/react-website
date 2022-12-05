@@ -130,7 +130,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-
+   width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -228,7 +228,7 @@ const Wrapper = styled.section`
       align-items: center;
       justify-content: center;
       .card {
-        max-width: 80%;
+        max-width: 100%;
       }
     }
   }
