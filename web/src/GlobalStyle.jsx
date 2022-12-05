@@ -114,5 +114,39 @@ input[type="submit"]{
     font-size:1.8rem;
     cursor:pointer;
 }
+@media (max-width:${({theme})=> theme.media.tab}){
+    .container{
+        padding:0 3.2rem;
+    }
+    .grid-three-coloumn{
+        grid-template-column:1fr 1fr;
+      }
+    
+    }
+    
+    @media (max-width:${({theme})=> theme.media.mobile}){
+        .grid{
+            gap:3.2rem;
+        }
+        .grid-two-coloumn, .grid-three-coloumn {
+            grid-template-columns:1fr 1fr;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+        }
+        
+        }
+  
 
+        @media (max-width:${({theme})=> theme.media.mobile}){
+           
+           .footer-bottom-flex{
+            display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+          
+          } }
 `;

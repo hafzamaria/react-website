@@ -34,6 +34,7 @@ const Contact = () => {
       }
     }
   }
+ 
 `;
   return (
    <Wrapper>

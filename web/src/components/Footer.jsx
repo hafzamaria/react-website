@@ -8,7 +8,7 @@ const Footer = () => {
     <Wrapper>
     <section className="contact-short">
       <div className='grid grid-two-column'>
-        <div>
+        <div className='heading'>
           <h3>Ready to get started?</h3>
           <h3>Talk to us today</h3>
         </div> 
@@ -82,6 +82,7 @@ const Footer = () => {
   )
 }
 const Wrapper = styled.section`
+
 .footer-container{
   display: flex;
   flex-direction: row;
@@ -170,6 +171,82 @@ footer{
     }
    
   }
+}
+
+@media (max-width:${({theme})=> theme.media.tab}){
+ 
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding: 20px;
+    -webkit-flex-direction: row;
+  }
+  .footer-bottom-flex{
+  
+    gap: 3rem;
+  }
+  .footer-bottom-flex{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+  }
+}
+}
+
+
+
+@media (max-width:${({theme})=> theme.media.mobile}){
+  .footer-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: -5rem;
+    
+
+    .footer-subscribe{
+      width: 19rem;
+    }
+    .footer-contact{
+      width: 19rem;
+    }
+  }
+  .contact-short{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem 6rem;
+
+    .grid{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+    .heading{
+      width:13rem;
+      
+      h3{
+        font-size:1rem;
+        padding:3px;
+       
+      }
+    }
+    }
+  }
+
+ 
+  .footer-bottom--section{
+
+.footer-bottom-flex{
+ display: flex;
+ flex-direction:column;
+ align-items: center;
+}
+}
 }
 `;
 

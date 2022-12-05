@@ -202,6 +202,37 @@ img{
   transition:all 0.2s linear;
 }
 }
+@media (max-width:${({theme})=> theme.media.tab}){
+  .main-container{
+      padding:0 3.2rem;
+      width:100%;
+      
+  }  .card{
+    max-width:80%;
+  }
+  
+  
+  
+  }
+  
+  @media (max-width:${({theme})=> theme.media.mobile}){
+      .grid{
+          gap:3.2rem;
+      }
+      .grid-two-coloumn, .grid-three-coloumn, .grid-four-coloumn{
+          grid-template-columns:1fr 1fr;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          .card{
+            max-width:100%;
+          }
+      }
+     
+      
+      }
+
 `;
 
 
